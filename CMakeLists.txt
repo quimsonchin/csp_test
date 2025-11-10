@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
-project(hello_csp C)
+project(libscpDemo_csp C)
 
-include_directories("$ENV{HOME}/libcsp/include")
-link_directories("$ENV{HOME}/libcsp/build")
+add_executable(sender_csp sender_csp.c)
+target_link_libraries(sender_csp csp)
 
-add_executable(hello_csp hello_csp.c)
-target_link_libraries(hello_csp csp)
+add_executable(receiver_csp receiver_csp.c)
+target_link_libraries(receiver_csp csp)
